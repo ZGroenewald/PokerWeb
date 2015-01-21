@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>PokerWeb</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="device-width, initial-sale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/loginPage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript"></script>
+	<title>Login Test Page</title>
+	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="login">
+		<div class="panel1">
+			<h1 align="center" style="color: #FFFFA3">PokerWeb</h1>
+			<h3 align="center" style="color: #FFFFA3">Sign in</h3>
+			<form id="inputForm" align="center" method="post">
+				Username or e-mail address:<br>
+				<input class="nameInput" type="text" name="firstname" align="center">
+				<br>
+				Password:<br>
+				<input class="passInput" type="text" name="password" align="center">
+				<p></p>
+				<input class="rememberMe" type="checkbox" name="remember">
+				<p></p>
+				<button class="loginButton" formaction="/main" type="submit" text-align="center" onsubmit="validateForm()">Log In</button>
+				<!--<input id="registerButton" type="submit" value="register"/>-->
+			</form>
+			<p></p>
+			<p align="center" style="color: #FFFFA3"> Don't have an account?
+			<a align="center" style="color: #FFFFA3" href="/register">Register here</a>
+			</p>
+		</div>
+	</div>	
+</body>
+</html>
