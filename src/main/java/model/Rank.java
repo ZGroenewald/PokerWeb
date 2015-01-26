@@ -1,4 +1,4 @@
-package model.poker.Local.cards;
+package model;
 
 /**
  * Created by Zen on 2015/01/09.

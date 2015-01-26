@@ -5,6 +5,8 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import services.PokerService;
 
+import javax.naming.Context;
+
 @Singleton
 public class AuthenticationController {
 
@@ -16,17 +18,13 @@ public class AuthenticationController {
         return result;
     }
 
-    public Result loginPage(){
+    public Result loginPage(Context context){
         Result result = Results.html();
-
-       //result.render("Hand", pokerService.dealHand().toString());
         return result;
     }
 
     public Result registerPage(){
         Result result = Results.html();
-
-       // result.render("Hand", pokerService.dealHand().toString());
         return result;
     }
 

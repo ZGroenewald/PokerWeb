@@ -1,4 +1,4 @@
-package model.poker.Local.cards;
+package model;
 
 /**
  * Created by Zen on 2015/01/09.
@@ -9,7 +9,7 @@ package model.poker.Local.cards;
     CLUBS ("C"),
     DIAMONDS ("D");
 
-    private  String symbol;
+    private String symbol;
 
     private Suit(String sym){
         symbol = sym;

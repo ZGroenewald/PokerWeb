@@ -1,13 +1,8 @@
-package model.poker.Local.evaluation;
+package helpers;
 
-import model.poker.Local.cards.Card;
-import model.poker.Local.cards.Hand;
-import model.poker.Local.cards.Rank;
-import model.poker.Local.cards.Suit;
-
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collectors;
+import model.Card;
+import model.Hand;
+import model.Suit;
 
 /**
  * Created by Zen on 2015/01/09.
@@ -37,7 +32,10 @@ public class EvaluateHand {
         else if (EvaluateHand.isTwoPair(h)){
             return "Two Pair";
         }
-        else return "One Pair";
+        else if (EvaluateHand.isOnePair(h)){
+            return "One pair";
+        }
+        else return "High Card";
 
     }
     public static boolean isHighCard(Hand hand){

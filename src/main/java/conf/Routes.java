@@ -29,24 +29,19 @@ public class Routes implements ApplicationRoutes {
     public void init(Router router) {  
         
         router.GET().route("/").with(ApplicationController.class, "loginPage");
-        router.POST().route("/login").with(ApplicationController.class, "loginPage");
-        router.POST().route("/main").with(ApplicationController.class, "mainPage");
+        router.GET().route("/login").with(ApplicationController.class, "loginPage");
+        router.POST().route("/login").with(ApplicationController.class, "login");
+        router.GET().route("/main").with(ApplicationController.class, "mainPage");
         router.GET().route("/register").with(ApplicationController.class, "registerPage");
+        router.POST().route("/register").with(ApplicationController.class, "register");
         router.GET().route("/logout").with(ApplicationController.class, "logout");
- 
         ///////////////////////////////////////////////////////////////////////
         // Assets (pictures / javascript)
         ///////////////////////////////////////////////////////////////////////    
         router.GET().route("/assets/webjars/{fileName: .*}").with(AssetsController.class, "serveWebJars");
         router.GET().route("/assets/{fileName: .*}").with(AssetsController.class, "serveStatic");
-        
         ///////////////////////////////////////////////////////////////////////
         // Index / Catchall shows index page
         ///////////////////////////////////////////////////////////////////////
-        router.GET().route("/.*").with(ApplicationController.class, "index");
-        router.POST().route("/.*").with(ApplicationController.class, "loginPage");
-        router.POST().route("/.*").with(ApplicationController.class, "mainPage");
-        router.GET().route("/.*").with(ApplicationController.class, "registerPage");
-        router.GET().route("/.*").with(ApplicationController.class, "logout");
     }
 }

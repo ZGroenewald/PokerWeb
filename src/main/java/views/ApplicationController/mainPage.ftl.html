@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+	  xmlns="http://www.w3.org/1999/html">
 <head>
 	<title>PokerWeb</title>
 	<meta charset="utf-8">
@@ -19,6 +20,13 @@
 			<h1 align="center" style="color: #FFFFA3">PokerWeb</h1>
 			<h3 align="center" style="color: #FFFFA3">Welcome</h3>			
 			<p></p>
+			<div class="games">
+				<form id="gameAction" align="center" method="post">
+					<button class="joinGame" formaction="/joinGame" type="button" name="join" align="center">Join Game</button>
+					<br>
+					<button class="newGame" formaction="/newGame" type="button" name="new" align="center">New Game</button>
+				</form>
+			</div>
 			<p align="center" style="color: #FFFFA3"> 
 			<a align="center" style="color: #FFFFA3" href="/login">Log out</a>
 			</p>

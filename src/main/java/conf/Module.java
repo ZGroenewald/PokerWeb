@@ -18,14 +18,17 @@ package conf;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
+import repositories.UserRepository;
+import services.AuthenticationService;
 import services.PokerService;
 
 @Singleton
 public class Module extends AbstractModule {
 
     protected void configure() {
-        
         // bind your injections here!
         bind(PokerService.class);
+        bind(AuthenticationService.class);
+        bind(UserRepository.class);
     }
 }

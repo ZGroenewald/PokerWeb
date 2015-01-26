@@ -1,4 +1,4 @@
-package model.poker.Local.cards;
+package model;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,6 +8,10 @@ import java.util.List;
  * Created by Zen on 2015/01/09.
  */
 public class Hand {
+
+    //public static final int SIZE = 5;
+    //public string cardRepresentation = "";
+    //@Transient private final List<Card> crds = new List<Card>();
     String hand = "";
     List<Card> cards;
     Deck deck;
@@ -43,7 +47,6 @@ public class Hand {
             hand += cards.get(i).getThisCardRank() + cards.get(i).getThisCardSuit();
             hand += ", ";
         }
-
         System.out.println(hand.length());
         return hand;
     }
